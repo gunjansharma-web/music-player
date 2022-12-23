@@ -39,21 +39,41 @@ nav ul li i{
     font-size: large;
 }
 .containor{
-    min-height: 75vh;
+    min-height: 70vh;
+   display: flex;
+    width: 90%;
+    border-radius: 10px;
+    background-image:url("background1.jpg") ;
+    background-size:100% 100%;
+    margin: 25px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
 }
 
 .bottom{
     position: sticky;
     width: 100%;
-    height: 10vh;
+    height: 11vh;
     background-color:rgb(33, 102, 99) ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 #myProgressBar{
     width: 90vw;
     cursor: pointer;
    accent-color: rgb(49, 49, 49);
+}
+.icons{
+  font-size: 25px;
+ color:rgb(236, 222, 222);
+
+}
+.icons img{
+  width: 3vw;
+
 }

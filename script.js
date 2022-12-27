@@ -101,6 +101,7 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach(
       e.target.classList.remove("bi-play-circle-fill");
       e.target.classList.add("bi-pause-circle-fill");
       audioElement.src = `songs/${songIndex}.mp3`;
+      masterSongName.innerText= songs[songIndex].songName;
       audioElement.currentTime = 0;
       audioElement.play();
       masterPlay.classList.remove("bi-play-circle-fill");
@@ -116,8 +117,10 @@ document.getElementById("next").addEventListener("click", () => {
     songIndex += 1;
   }
   audioElement.src = `songs/${songIndex}.mp3`;
+  masterSongName.innerText= songs[songIndex].songName;
   audioElement.currentTime = 0;
   audioElement.play();
+  gif.style.opacity = "1";
   masterPlay.classList.remove("bi-play-circle-fill");
   masterPlay.classList.add("bi-pause-circle-fill");
 });
@@ -128,8 +131,10 @@ document.getElementById("pervious").addEventListener("click", () => {
     songIndex -= 1;
   }
   audioElement.src = `songs/${songIndex}.mp3`;
+  masterSongName.innerText= songs[songIndex].songName;
   audioElement.currentTime = 0;
   audioElement.play();
+  gif.style.opacity = "1";
   masterPlay.classList.remove("bi-play-circle-fill");
   masterPlay.classList.add("bi-pause-circle-fill");
 });
